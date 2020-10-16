@@ -291,6 +291,15 @@ export default {
       this.jobTemplate = val.id + '(' + val.jobDesc + ')'
     }
   }
+  // beforeRouteLeave: function(to, from, next) {
+  //   this.$confirm('确定离开吗，离开后未保存的构建会被刷新？', '提示', {
+  //     confirmButtonText: '确定',
+  //     cancelButtonText: '取消',
+  //     type: 'warning'
+  //   }).then(() => {
+  //     next()
+  //   })
+  // }
 }
 </script>
 

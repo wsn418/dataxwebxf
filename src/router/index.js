@@ -163,13 +163,13 @@ export const asyncRoutes = [
         path: 'jobInfo',
         name: 'JobInfo',
         component: () => import('@/views/datax/jobInfo/index'),
-        meta: { title: '任务管理', icon: 'task-cfg' }
+        meta: { title: '任务管理', icon: 'task-cfg', noCache: true }
       },
       {
         path: 'jsonBuild',
         name: 'JsonBuild',
         component: () => import('@/views/datax/json-build/index'),
-        meta: { title: '任务构建', icon: 'guide', noCache: false }
+        meta: { title: '任务构建', icon: 'guide', noCache: true }
       },
       {
         path: 'jsonBuildBatch',
@@ -211,7 +211,7 @@ export const asyncRoutes = [
         path: 'jobLog',
         name: 'JobLog',
         component: () => import('@/views/datax/jobLog/index'),
-        meta: { title: '日志管理', icon: 'log' }
+        meta: { title: '日志管理', icon: 'log', noCache: true }
       }
     ]
   },
@@ -226,7 +226,7 @@ export const asyncRoutes = [
         path: 'executor',
         name: 'Executor',
         component: () => import('@/views/datax/executor/index'),
-        meta: { title: '执行器管理', icon: 'exe-cfg' }
+        meta: { title: '执行器管理', icon: 'exe-cfg', noCache: true }
       }
     ]
   },
@@ -241,7 +241,7 @@ export const asyncRoutes = [
         path: 'user',
         name: 'User',
         component: () => import('@/views/datax/user/index'),
-        meta: { title: '用户管理', icon: 'table' }
+        meta: { title: '用户管理', icon: 'table', noCache: true }
       }
     ]
   },
@@ -256,7 +256,7 @@ export const asyncRoutes = [
         path: 'registry',
         name: 'Registry',
         component: () => import('@/views/datax/registry/index'),
-        meta: { title: '资源监控', icon: 'battery-line' }
+        meta: { title: '资源监控', icon: 'battery-line', noCache: true }
       }
     ]
   },

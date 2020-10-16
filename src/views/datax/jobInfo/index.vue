@@ -716,6 +716,7 @@ export default {
         param.jobId = row.id
         param.executorParam = row.executorParam
         job.triggerJob(param).then(response => {
+          this.fetchData()
           this.$notify({
             title: 'Success',
             message: 'Execute Successfully',
@@ -727,7 +728,7 @@ export default {
     },
     // 查看日志
     handlerViewLog(row) {
-      this.$router.push({ path: '/datax/log/jobLog', query: { jobId: row.id }})
+      this.$router.push({ path: '/redirect' + '/datax/log/jobLog' + '?' + new Date().getTime(), query: { jobId: row.id }})
     },
     handlerStart(row) {
       job.startJob(row.id).then(response => {
