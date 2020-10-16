@@ -3,7 +3,7 @@
     <div class="filter-container">
       <el-input v-model="listQuery.registryKey" placeholder="执行器" style="width: 200px;" class="filter-item" />
       <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="fetchData">
-        Search
+        搜索
       </el-button>
     </div>
     <div v-for="item in list" :key="item.id" class="container">

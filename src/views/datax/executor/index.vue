@@ -114,10 +114,18 @@ export default {
         create: 'Create'
       },
       rules: {
-        appName: [{ required: true, message: 'appName is required', trigger: 'blur' }],
-        title: [{ required: true, message: 'title is required', trigger: 'blur' }],
-        order: [{ required: true, message: 'title is required', trigger: 'blur' }],
-        addressType: [{ required: true, message: 'title is required', trigger: 'change' }]
+        /**
+         * 添加汉化
+         * appName: [{ required: true, message: 'appName is required', trigger: 'blur' }],
+         * title: [{ required: true, message: 'title is required', trigger: 'blur' }],
+         * order: [{ required: true, message: 'title is required', trigger: 'blur' }],
+         * addressType: [{ required: true, message: 'title is required', trigger: 'change' }]
+         * by 张增燊
+         */
+        appName: [{ required: true, message: 'appName不能为空', trigger: 'blur' }],
+        title: [{ required: true, message: '名称不能为空', trigger: 'blur' }],
+        order: [{ required: true, message: '执行器不能为空', trigger: 'blur' }],
+        addressType: [{ required: true, message: '请选择注册方式', trigger: 'change' }]
       },
       temp: {
         id: undefined,

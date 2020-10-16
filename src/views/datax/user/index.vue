@@ -128,9 +128,16 @@ export default {
         create: 'Create'
       },
       rules: {
-        role: [{ required: true, message: 'role is required', trigger: 'change' }],
-        username: [{ required: true, message: 'username is required', trigger: 'blur' }],
-        password: [{ required: false, message: 'password is required', trigger: 'blur' }]
+        /**
+         * 添加汉化
+         * role: [{ required: true, message: 'role is required', trigger: 'change' }],
+         * username: [{ required: true, message: 'username is required', trigger: 'blur' }],
+         * password: [{ required: false, message: 'password is required', trigger: 'blur' }]
+         * by 张增燊
+         */
+        role: [{ required: true, message: '请选择用户类型', trigger: 'change' }],
+        username: [{ required: true, message: '账号不能为空', trigger: 'blur' }],
+        password: [{ required: false, message: '密码不能为空', trigger: 'blur' }]
       },
       temp: {
         id: undefined,

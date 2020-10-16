@@ -269,12 +269,24 @@ export default {
         create: 'Create'
       },
       rules: {
-        jobGroup: [{ required: true, message: 'jobGroup is required', trigger: 'change' }],
-        executorRouteStrategy: [{ required: true, message: 'executorRouteStrategy is required', trigger: 'change' }],
-        executorBlockStrategy: [{ required: true, message: 'executorBlockStrategy is required', trigger: 'change' }],
-        jobDesc: [{ required: true, message: 'jobDesc is required', trigger: 'blur' }],
-        jobProject: [{ required: true, message: 'jobProject is required', trigger: 'blur' }],
-        jobCron: [{ required: true, message: 'jobCron is required', trigger: 'blur' }],
+        /**
+         * 添加汉化
+         * jobGroup: [{ required: true, message: 'jobGroup is required', trigger: 'change' }],
+         * executorRouteStrategy: [{ required: true, message: 'executorRouteStrategy is required', trigger: 'change' }],
+         * executorBlockStrategy: [{ required: true, message: 'executorBlockStrategy is required', trigger: 'change' }],
+         * jobDesc: [{ required: true, message: 'jobDesc is required', trigger: 'blur' }],
+         * jobProject: [{ required: true, message: 'jobProject is required', trigger: 'blur' }],
+         * jobCron: [{ required: true, message: 'jobCron is required', trigger: 'blur' }],
+         * projectId: [{ required: true, message: 'projectId is required', trigger: 'change' }]
+         * by 张增燊
+         */
+        jobGroup: [{ required: true, message: '请选择执行器', trigger: 'change' }],
+        executorRouteStrategy: [{ required: true, message: '请选择路由策略', trigger: 'change' }],
+        executorBlockStrategy: [{ required: true, message: '请选择阻塞处理策略', trigger: 'change' }],
+        glueType: [{ required: true, message: '请选择任务脚本类型', trigger: 'change' }],
+        jobDesc: [{ required: true, message: '任务名称不能为空', trigger: 'blur' }],
+        jobProject: [{ required: true, message: '任务所属项目名称不能为空', trigger: 'blur' }],
+        jobCron: [{ required: true, message: 'jobCron不能为空', trigger: 'blur' }],
         incStartId: [{ trigger: 'blur', validator: validateIncParam }],
         replaceParam: [{ trigger: 'blur', validator: validateIncParam }],
         primaryKey: [{ trigger: 'blur', validator: validateIncParam }],
@@ -283,7 +295,7 @@ export default {
         partitionField: [{ trigger: 'blur', validator: validatePartitionParam }],
         datasourceId: [{ trigger: 'change', validator: validateIncParam }],
         readerTable: [{ trigger: 'blur', validator: validateIncParam }],
-        projectId: [{ required: true, message: 'projectId is required', trigger: 'change' }]
+        projectId: [{ required: true, message: '所属项目id不能为空', trigger: 'change' }]
       },
       temp: {
         id: undefined,
