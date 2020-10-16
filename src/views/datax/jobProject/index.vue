@@ -128,8 +128,14 @@ export default {
         create: 'Create'
       },
       rules: {
-        name: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        description: [{ required: true, message: 'this is required', trigger: 'blur' }]
+        /**
+         * 添加汉化
+         * name: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * description: [{ required: true, message: 'this is required', trigger: 'blur' }]
+         * by 张增燊
+         */
+        name: [{ required: true, message: '项目名称不能为空', trigger: 'blur' }],
+        description: [{ required: true, message: '项目描述不能为空', trigger: 'blur' }]
       },
       temp: {
         id: undefined,

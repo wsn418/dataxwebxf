@@ -208,14 +208,26 @@ export default {
         create: 'Create'
       },
       rules: {
-        datasourceName: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        jdbcUsername: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        jdbcPassword: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        jdbcUrl: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        jdbcDriverClass: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        datasource: [{ required: true, message: 'this is required', trigger: 'change' }],
-        zkAdress: [{ required: true, message: 'this is required', trigger: 'blur' }],
-        databaseName: [{ required: true, message: 'this is required', trigger: 'blur' }]
+        /**
+         * 添加汉化
+         * datasourceName: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * jdbcUsername: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * jdbcPassword: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * jdbcUrl: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * jdbcDriverClass: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * datasource: [{ required: true, message: 'this is required', trigger: 'change' }],
+         * zkAdress: [{ required: true, message: 'this is required', trigger: 'blur' }],
+         * databaseName: [{ required: true, message: 'this is required', trigger: 'blur' }]
+         * by 张增燊
+         */
+        datasourceName: [{ required: true, message: '数据源名称不能为空', trigger: 'blur' }],
+        jdbcUsername: [{ required: true, message: '数据库用户名不能为空', trigger: 'blur' }],
+        jdbcPassword: [{ required: true, message: '数据库密码不能为空', trigger: 'blur' }],
+        jdbcUrl: [{ required: true, message: 'jdbcurl不能为空', trigger: 'blur' }],
+        jdbcDriverClass: [{ required: true, message: 'jdbc驱动类不能为空', trigger: 'blur' }],
+        datasource: [{ required: true, message: '请选择数据源', trigger: 'change' }],
+        zkAdress: [{ required: true, message: 'zk地址不能为空', trigger: 'blur' }],
+        databaseName: [{ required: true, message: '数据库名称不能为空', trigger: 'blur' }]
       },
       temp: {
         id: undefined,

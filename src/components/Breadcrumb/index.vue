@@ -37,7 +37,13 @@ export default {
       const first = matched[0]
 
       if (!this.isDashboard(first)) {
-        matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }}].concat(matched)
+        /**
+         * 添加了汉化
+         * matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }}].concat(matched)
+         * @type {{path: string, meta: {title: string}}[]}
+         * by 张增燊
+         */
+        matched = [{ path: '/dashboard' }].concat(matched)
       }
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)

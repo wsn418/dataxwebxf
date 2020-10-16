@@ -2,10 +2,22 @@
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
+      <!--
+      增加了汉化，把<h3 class="title">Login</h3>
+      变成<h3 class="title">登录</h3>
+      by 张增燊
+      -->
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">登录</h3>
       </div>
 
+
+      <!--
+      增加了汉化，把username中el-input的属性
+      placeholder="username"
+      变成placeholder="账号"
+      by 张增燊
+      -->
       <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
@@ -13,7 +25,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="Username"
+          placeholder="账号"
           name="username"
           type="text"
           tabindex="1"
@@ -21,6 +33,12 @@
         />
       </el-form-item>
 
+      <!--
+      增加了汉化，把password中el-input的属性
+      placeholder="password"
+      变成placeholder="密码"
+      by 张增燊
+      -->
       <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
         <el-form-item prop="password">
           <span class="svg-container">
@@ -31,7 +49,7 @@
             ref="password"
             v-model="loginForm.password"
             :type="passwordType"
-            placeholder="Password"
+            placeholder="密码"
             name="password"
             tabindex="2"
             autocomplete="on"
@@ -45,11 +63,20 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
     </el-form>
 
+    <!--
+     增加了汉化，把
+     <el-dialog title="Or connect with" :visible.sync="showDialog">
+     Can not be simulated on local, so please combine you own business simulation! ! !
+     变成
+     <el-dialog title="Or connect with" :visible.sync="showDialog">
+      无法在本地模拟，因此请结合您自己的业务模拟！ ！ ！
+     by 张增燊
+     -->
     <el-dialog title="Or connect with" :visible.sync="showDialog">
-      Can not be simulated on local, so please combine you own business simulation! ! !
+      无法在本地模拟，因此请结合您自己的业务模拟！ ！ ！
       <br>
       <br>
       <br>
@@ -75,7 +102,13 @@ export default {
     // }
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
-        callback(new Error('The password can not be less than 6 digits'))
+        /**
+         * 增加了汉化，把
+         * callback(new Error('The password can not be less than 6 digits'))
+         * 变成callback(new Error('密码的长度不能小于6位'))
+         * by 张增燊
+         */
+        callback(new Error('密码的长度不能小于6位'))
       } else {
         callback()
       }
