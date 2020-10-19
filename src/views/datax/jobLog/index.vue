@@ -192,7 +192,7 @@ export default {
       dialogStatus: '',
       executorList: '',
       textMap: {
-        create: 'Clear'
+        create: '清除'
       },
       rules: {},
       temp: {
@@ -285,8 +285,8 @@ export default {
         this.fetchData()
         this.dialogFormVisible = false
         this.$notify({
-          title: 'Success',
-          message: 'Delete Successfully',
+          title: '成功',
+          message: '日志删除成功',
           type: 'success',
           duration: 2000
         })
@@ -331,8 +331,8 @@ export default {
         this.fetchData()
         this.dialogFormVisible = false
         this.$notify({
-          title: 'Success',
-          message: 'Kill Successfully',
+          title: '成功',
+          message: '日志停止成功',
           type: 'success',
           duration: 2000
         })

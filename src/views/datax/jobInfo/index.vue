@@ -624,8 +624,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Created Successfully',
+              title: '成功',
+              message: '任务创建成功',
               type: 'success',
               duration: 2000
             })
@@ -699,8 +699,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Update Successfully',
+              title: '成功',
+              message: '任务更新成功',
               type: 'success',
               duration: 2000
             })
@@ -717,8 +717,8 @@ export default {
         job.removeJob(row.id).then(response => {
           this.fetchData()
           this.$notify({
-            title: 'Success',
-            message: 'Delete Successfully',
+            title: '成功',
+            message: '任务删除成功',
             type: 'success',
             duration: 2000
           })
@@ -739,8 +739,8 @@ export default {
         job.triggerJob(param).then(response => {
           this.fetchData()
           this.$notify({
-            title: 'Success',
-            message: 'Execute Successfully',
+            title: '成功',
+            message: '任务执行成功',
             type: 'success',
             duration: 2000
           })
@@ -754,8 +754,8 @@ export default {
     handlerStart(row) {
       job.startJob(row.id).then(response => {
         this.$notify({
-          title: 'Success',
-          message: 'Start Successfully',
+          title: '成功',
+          message: '任务开启成功',
           type: 'success',
           duration: 2000
         })
@@ -764,8 +764,8 @@ export default {
     handlerStop(row) {
       job.stopJob(row.id).then(response => {
         this.$notify({
-          title: 'Success',
-          message: 'Start Successfully',
+          title: '成功',
+          message: '任务停止成功',
           type: 'success',
           duration: 2000
         })

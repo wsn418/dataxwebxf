@@ -323,8 +323,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Created Successfully',
+              title: '成功',
+              message: '数据源创建成功',
               type: 'success',
               duration: 2000
             })
@@ -345,8 +345,8 @@ export default {
               })
             } else {
               this.$notify({
-                title: 'Success',
-                message: 'Tested Successfully',
+                title: '成功',
+                message: '数据源测试连接成功',
                 type: 'success',
                 duration: 2000
               })
@@ -379,8 +379,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Update Successfully',
+              title: '成功',
+              message: '数据源更新成功',
               type: 'success',
               duration: 2000
             })
@@ -410,8 +410,8 @@ export default {
       datasourceApi.deleted({ idList: row.id }).then(response => {
         this.fetchData()
         this.$notify({
-          title: 'Success',
-          message: 'Delete Successfully',
+          title: '成功',
+          message: '数据源删除成功',
           type: 'success',
           duration: 2000
         })
