@@ -35,7 +35,10 @@
         <template slot-scope="scope">{{ scope.row.id }}</template>
       </el-table-column>
       <el-table-column label="任务名称" align="center">
-        <template slot-scope="scope">{{ scope.row.jobDesc }}</template>
+        <template slot-scope="scope">
+          <span v-if="scope.row.jobName"> {{ scope.row.jobName }}</span>
+          <span v-else> {{ scope.row.jobDesc }}</span>
+        </template>
       </el-table-column>
       <el-table-column label="所属项目" align="center" width="120">
         <template slot-scope="scope">{{ scope.row.projectName }}</template>

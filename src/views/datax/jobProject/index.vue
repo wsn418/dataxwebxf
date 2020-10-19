@@ -59,7 +59,7 @@
       @pagination="fetchData"
     />
 
-    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="800px">
+    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="800px" :before-close="handleClose">
       <el-form ref="dataForm" :rules="rules" :model="temp" label-position="left" label-width="100px">
         <el-form-item label="项目名称" prop="name">
           <el-input v-model="temp.name" placeholder="项目名称" style="width: 40%" />
@@ -149,6 +149,13 @@ export default {
     this.fetchData()
   },
   methods: {
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done()
+        })
+        .catch(_ => {})
+    },
     fetchData() {
       this.listLoading = true
       jobProjectApi.list(this.listQuery).then(response => {

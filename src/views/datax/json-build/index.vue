@@ -18,6 +18,7 @@
         <Mapper ref="mapper" />
       </div>
       <div v-show="active===4" class="step4">
+        <el-input v-model="temp.jobName" placeholder="任务名称(默认为数据库名）" style="width: 200px;" class="filter-item" />
         <el-button type="primary" @click="buildJson">1.构建</el-button>
         <el-button type="primary" @click="handleJobTemplateSelectDrawer">{{ jobTemplate ? jobTemplate : "2.选择模板" }}</el-button>
         <el-button type="info" @click="handleCopy(inputData,$event)">复制json</el-button>
@@ -139,7 +140,8 @@ export default {
         executorParam: '',
         replaceParam: '',
         jvmParam: '',
-        incStartTime: ''
+        incStartTime: '',
+        jobName: ''
       }
     }
   },
@@ -156,8 +158,12 @@ export default {
         // 实现第一步骤读取的表和字段直接带到第二步骤
         // this.$refs.writer.sendTableNameAndColumns(fromTableName, fromColumnList)
         // 取子组件的数据
-        // console.info(this.$refs.reader.getData())
-        this.active++
+        console.info(this.$refs.reader.getData())
+        if (this.$refs.reader.getData().tableName === '') {
+          this.$message.error('请先填完必填项')
+        } else {
+          this.active++
+        }
       } else {
         // 将第一步和第二步得到的字段名字发送到第三步
         if (this.active === 2) {
@@ -176,7 +182,11 @@ export default {
             this.active = 1
           })
         } else {
-          this.active++
+          if (this.$refs.writer.getData().tableName === '') {
+            this.$message.error('请先填完必填项')
+          } else {
+            this.active++
+          }
         }
       }
     },
