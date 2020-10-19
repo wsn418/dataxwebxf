@@ -18,6 +18,7 @@
         <Mapper ref="mapper" />
       </div>
       <div v-show="active===4" class="step4">
+        <el-input v-model="temp.jobName" placeholder="任务名称(默认为数据库名）" style="width: 200px;" class="filter-item" />
         <el-button type="primary" @click="buildJson">1.构建</el-button>
         <el-button type="primary" @click="handleJobTemplateSelectDrawer">{{ jobTemplate ? jobTemplate : "2.选择模板" }}</el-button>
         <el-button type="info" @click="handleCopy(inputData,$event)">复制json</el-button>
@@ -139,7 +140,8 @@ export default {
         executorParam: '',
         replaceParam: '',
         jvmParam: '',
-        incStartTime: ''
+        incStartTime: '',
+        jobName: ''
       }
     }
   },
