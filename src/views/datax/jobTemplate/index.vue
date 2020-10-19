@@ -129,6 +129,7 @@
               解决了删除jobCron输入框时会出现undefined的问题
               因为不需要要通过输入框修改Cron，所以把该输入框设置为readonly
               修改在CronBox中进行
+              BY 张增燊
                -->
               <el-input v-model="temp.jobCron" auto-complete="off" v-on:click.native="showCronBox = true" readonly placeholder="请输入Cron表达式">
                 <el-button v-if="!showCronBox" slot="append" icon="el-icon-turn-off" title="打开图形配置" @click="showCronBox = true" />
