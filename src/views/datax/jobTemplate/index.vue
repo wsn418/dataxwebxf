@@ -130,8 +130,8 @@
               因为不需要要通过输入框修改Cron，所以把该输入框设置为readonly
               修改在CronBox中进行
               BY 张增燊
-                -->
-              <el-input v-model="temp.jobCron" auto-complete="off" readonly placeholder="请输入Cron表达式" @click.native="showCronBox = true">
+               -->
+              <el-input v-model="temp.jobCron" auto-complete="off" v-on:click.native="showCronBox = true" readonly placeholder="请输入Cron表达式">
                 <el-button v-if="!showCronBox" slot="append" icon="el-icon-turn-off" title="打开图形配置" @click="showCronBox = true" />
                 <el-button v-else slot="append" icon="el-icon-open" title="关闭图形配置" @click="showCronBox = false" />
               </el-input>
@@ -429,8 +429,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Created Successfully',
+              title: '成功',
+              message: '任务模板创建成功',
               type: 'success',
               duration: 2000
             })
@@ -491,8 +491,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Update Successfully',
+              title: '成功',
+              message: '任务模板编辑成功',
               type: 'success',
               duration: 2000
             })
@@ -509,8 +509,8 @@ export default {
         jobTemp.removeJob(row.id).then(response => {
           this.fetchData()
           this.$notify({
-            title: 'Success',
-            message: 'Delete Successfully',
+            title: '成功',
+            message: '任务模板删除成功',
             type: 'success',
             duration: 2000
           })

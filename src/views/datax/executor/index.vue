@@ -178,8 +178,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Created Successfully',
+              title: '成功',
+              message: '执行器创建成功',
               type: 'success',
               duration: 2000
             })
@@ -204,8 +204,8 @@ export default {
             this.fetchData()
             this.dialogFormVisible = false
             this.$notify({
-              title: 'Success',
-              message: 'Update Successfully',
+              title: '成功',
+              message: '执行器更新成功',
               type: 'success',
               duration: 2000
             })
@@ -217,8 +217,8 @@ export default {
       executor.deleted(row.id).then(response => {
         this.fetchData()
         this.$notify({
-          title: 'Success',
-          message: 'Delete Successfully',
+          title: '成功',
+          message: '执行器删除成功',
           type: 'success',
           duration: 2000
         })

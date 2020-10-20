@@ -192,8 +192,8 @@ export default {
       // 调api
       job.batchAddJob(obj).then(response => {
         this.$notify({
-          title: 'Success',
-          message: 'Created Successfully',
+          title: '成功',
+          message: '创建成功',
           type: 'success',
           duration: 2000
         })
